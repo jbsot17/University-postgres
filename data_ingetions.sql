@@ -132,37 +132,37 @@ INSERT INTO secciones (curso_id, profesor_id, semestre, seccion_year, aula, hora
 
 --- matriculas 
 INSERT INTO matriculas (estudiante_id, seccion_id, calificacion, estado) VALUES 
-(21, 1, 8.5, 'Aprobado'),
-(21, 3, 7.0, 'Aprobado'),
-(22, 1, 9.0, 'Aprobado'),
-(22, 3, NULL, 'Cursando'),
-(23, 2, 6.5, 'Aprobado'),
-(24, 5, 8.0, 'Aprobado'),
-(25, 4, NULL, 'Cursando'),
-(26, 6, 8.0, 'Aprobado'),
-(26, 8, NULL, 'Cursando'),
-(27, 7, 7.5, 'Aprobado'),
-(27, 9, 9.0, 'Aprobado'),
-(28, 8, 8.5, 'Aprobado'),
-(28, 10, NULL, 'Cursando'),
-(29, 9, 6.0, 'Aprobado'),
-(29, 11, 7.0, 'Aprobado'),
-(30, 10, 9.5, 'Aprobado'),
-(30, 12, NULL, 'Cursando'),
-(31, 11, 8.0, 'Aprobado'),
-(31, 13, 7.5, 'Aprobado'),
-(32, 12, 6.5, 'Aprobado'),
-(32, 14, NULL, 'Cursando'),
-(33, 13, 9.0, 'Aprobado'),
-(33, 15, 8.5, 'Aprobado'),
-(34, 14, 7.0, 'Aprobado'),
-(34, 6, NULL, 'Cursando'),
-(35, 15, 6.5, 'Aprobado'),
-(36, 6, 8.0, 'Aprobado'),
-(37, 7, NULL, 'Cursando'),
-(38, 8, 7.5, 'Aprobado'),
-(39, 9, 9.0, 'Aprobado'),
-(40, 10, NULL, 'Cursando');
+(1, 1, 8.5, 'Aprobado'),
+(1, 3, 7.0, 'Aprobado'),
+(2, 1, 9.0, 'Aprobado'),
+(2, 3, NULL, 'Cursando'),
+(3, 2, 6.5, 'Aprobado'),
+(4, 5, 8.0, 'Aprobado'),
+(5, 4, NULL, 'Cursando'),
+(6, 6, 8.0, 'Aprobado'),
+(6, 8, NULL, 'Cursando'),
+(7, 7, 7.5, 'Aprobado'),
+(7, 9, 9.0, 'Aprobado'),
+(8, 8, 8.5, 'Aprobado'),
+(8, 10, NULL, 'Cursando'),
+(9, 9, 6.0, 'Aprobado'),
+(9, 11, 7.0, 'Aprobado'),
+(10, 10, 9.5, 'Aprobado'),
+(10, 12, NULL, 'Cursando'),
+(11, 11, 8.0, 'Aprobado'),
+(11, 13, 7.5, 'Aprobado'),
+(12, 12, 6.5, 'Aprobado'),
+(12, 14, NULL, 'Cursando'),
+(13, 13, 9.0, 'Aprobado'),
+(13, 15, 8.5, 'Aprobado'),
+(14, 14, 7.0, 'Aprobado'),
+(14, 6, NULL, 'Cursando'),
+(15, 15, 6.5, 'Aprobado'),
+(16, 6, 8.0, 'Aprobado'),
+(17, 7, NULL, 'Cursando'),
+(18, 8, 7.5, 'Aprobado'),
+(19, 9, 9.0, 'Aprobado'),
+(20, 10, NULL, 'Cursando');
 
 
 -- prerrequisitos 
@@ -229,19 +229,19 @@ INSERT INTO libros (isbn, titulo, autor, editorial, year_publicacion, edicion, c
 
 -- prestamos 
 INSERT INTO prestamos (libros_id, estudiante_id, fecha_prestamos, fecha_devolucion_esperada, fecha_devolucion_real, estado) VALUES
-(1, 21, '2023-02-15', '2023-03-15', '2023-03-10', 'Devuelto'),
-(2, 23, '2023-03-01', '2023-03-31', NULL, 'Prestado'),
-(4, 24, '2023-01-20', '2023-02-20', '2023-03-05', 'Atrasado'),
-(5, 26, '2023-03-10', '2023-04-10', '2023-04-05', 'Devuelto'),
-(6, 27, '2023-03-15', '2023-04-15', NULL, 'Prestado'),
-(7, 28, '2023-02-20', '2023-03-20', '2023-03-25', 'Atrasado'),
-(8, 29, '2023-04-01', '2023-05-01', NULL, 'Prestado'),
-(9, 30, '2023-01-15', '2023-02-15', '2023-02-10', 'Devuelto'),
-(10, 31, '2023-03-05', '2023-04-05', NULL, 'Prestado'),
-(5, 32, '2023-02-28', '2023-03-28', '2023-04-02', 'Atrasado'),
-(6, 33, '2023-04-10', '2023-05-10', NULL, 'Prestado'),
-(7, 34, '2023-03-20', '2023-04-20', NULL, 'Prestado'),
-(8, 35, '2023-01-30', '2023-02-28', '2023-03-05', 'Atrasado');
+(1, 1, '2023-02-15', '2023-03-15', '2023-03-10', 'Devuelto'),
+(2, 3, '2023-03-01', '2023-03-31', NULL, 'Prestado'),
+(4, 4, '2023-01-20', '2023-02-20', '2023-03-05', 'Atrasado'),
+(5, 6, '2023-03-10', '2023-04-10', '2023-04-05', 'Devuelto'),
+(6, 7, '2023-03-15', '2023-04-15', NULL, 'Prestado'),
+(7, 8, '2023-02-20', '2023-03-20', '2023-03-25', 'Atrasado'),
+(8, 9, '2023-04-01', '2023-05-01', NULL, 'Prestado'),
+(9, 10, '2023-01-15', '2023-02-15', '2023-02-10', 'Devuelto'),
+(10, 11, '2023-03-05', '2023-04-05', NULL, 'Prestado'),
+(5, 12, '2023-02-28', '2023-03-28', '2023-04-02', 'Atrasado'),
+(6, 13, '2023-04-10', '2023-05-10', NULL, 'Prestado'),
+(7, 14, '2023-03-20', '2023-04-20', NULL, 'Prestado'),
+(8, 15, '2023-01-30', '2023-02-28', '2023-03-05', 'Atrasado');
 
 
 -- becas 
@@ -259,16 +259,16 @@ INSERT INTO becas (nombre, descripcion , monto, requisitos, disponibles) VALUES
 
 --- becas asignadas 
 INSERT INTO becas_estudiantes (beca_id, estudiante_id , fecha_vencimiento, monto_asignado, estado) VALUES 
-(1, 21, '2023-12-31', 2000.00, 'Activa'),
-(3, 24, '2024-05-31', 2500.00, 'Activa'),
-(4, 22, '2023-12-31', 1800.00, 'Activa'),
-(5, 23, '2024-06-30', 2200.00, 'Activa'),
-(6, 25, '2023-12-31', 2000.00, 'Activa'),
-(7, 27, '2024-05-31', 2300.00, 'Activa'),
-(4, 29, '2023-12-31', 1800.00, 'Activa'),
-(5, 31, '2024-06-30', 2200.00, 'Activa'),
-(6, 33, '2023-12-31', 2000.00, 'Activa'),
-(7, 35, '2024-05-31', 2300.00, 'Cancelada');
+(1, 1, '2023-12-31', 2000.00, 'Activa'),
+(3, 4, '2024-05-31', 2500.00, 'Activa'),
+(4, 2, '2023-12-31', 1800.00, 'Activa'),
+(5, 3, '2024-06-30', 2200.00, 'Activa'),
+(6, 5, '2023-12-31', 2000.00, 'Activa'),
+(7, 7, '2024-05-31', 2300.00, 'Activa'),
+(4, 9, '2023-12-31', 1800.00, 'Activa'),
+(5, 11, '2024-06-30', 2200.00, 'Activa'),
+(6, 13, '2023-12-31', 2000.00, 'Activa'),
+(7, 15, '2024-05-31', 2300.00, 'Cancelada');
 
 
 
@@ -287,26 +287,29 @@ INSERT INTO eventos (departamento_id, nombre, descripcion, fecha_inicio, fecha_f
 
 --- asistencias de los eventos 
 INSERT INTO asistentes_eventos (evento_id, estudiante_id, profesor_id, asistio) VALUES 
-(1, 21, NULL, TRUE),
+(1, 1, NULL, TRUE),
 (1, NULL, 1, TRUE),
-(2, 24, NULL, FALSE),
-(3, 22, NULL, TRUE),
+(2, 4, NULL, FALSE),
+(3, 2, NULL, TRUE),
 (3, NULL, 3, TRUE),
-(4, 26, NULL, TRUE),
+(4, 6, NULL, TRUE),
 (4, NULL, 6, TRUE),
-(5, 27, NULL, FALSE),
+(5, 7, NULL, FALSE),
 (5, NULL, 7, TRUE),
-(6, 28, NULL, TRUE),
+(6, 8, NULL, TRUE),
 (6, NULL, 8, FALSE),
-(7, 29, NULL, TRUE),
+(7, 9, NULL, TRUE),
 (7, NULL, 9, TRUE),
-(8, 30, NULL, FALSE),
+(8, 10, NULL, FALSE),
 (8, NULL, 10, TRUE),
-(4, 31, NULL, TRUE),
-(5, 32, NULL, FALSE),
-(6, 33, NULL, TRUE),
-(7, 34, NULL, FALSE),
-(8, 35, NULL, TRUE); 
+(4, 11, NULL, TRUE),
+(5, 12, NULL, FALSE),
+(6, 13, NULL, TRUE),
+(7, 14, NULL, FALSE),
+(8, 15, NULL, TRUE); 
+
+
+
 
 
 
