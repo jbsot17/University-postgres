@@ -1,0 +1,14 @@
+### para descargar postgres #### 
+
+
+https://www.postgresql.org/download/
+
+
+
+
+### para descargar dbeaver ###### 
+
+https://dbeaver.io/download/
+
+
+
