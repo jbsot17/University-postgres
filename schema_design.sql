@@ -1,6 +1,6 @@
 -- creacion de la data base 
 
- -- CREATE DATABASE universidad_estudio;
+--  CREATE DATABASE universidad_estudio;
 
 
 -- NOTA: para efectos de rapidez se crea todas las primary key con serial pero una buena practica es crearla de la siguiente manera 
