@@ -1,0 +1,117 @@
+temas:
+	• primera conexion en dbeaver
+	• crea tu primer base de datos en postgresql
+	• explorando tablas y esquemas sin miedo
+duracion: 40 minutos
+
+
+
+
+	1. Primera conexion con dbeaver: 
+Hacer un video explicativo de una conexion con postgres tener en cuenta que debes seleccionar ver das las bases de datos ejemplificar esto para hacer un video un poco mas largo 
+
+
+	2. Crea tu primera base de datos en postgre ;;
+Aqui el procedimiento es el siguiente: 
+	1. creamos una base de datos normal (forma visual), luego lo hacemos con la sentencia create database xxxxxxx, esto con la finalidad de darle mas tiempo al video 
+	2. Luego procedemos a explicar que para el curso debemos seguir los siguientes pasos:
+		a. Crear una base de datos sea con la sentenecia o de manera visual y creamos la base universidad_estudio
+		b. Aqui podemos seguir de dos formas la recomendada por ahora es levantar el respaldo de de la base de datos llamada universidad_db.sql  (seleccionar en el gestor de archivos la extension .sql) la cual se carga haciendo click derecho en la base de datos creada - luego tools - restore (aqui seguir los pasos para levantar la base de datos) 
+		c. Si se sientes mas osados podemos hacerlo de la otra manera que es crear todo a traves se sentencias sql que estan como archivos complementarios solo deben hacerlo de la siguiente manera - creamos la base de datos - luego nos conectamos a la base de datos creadad - ahora ejecutamos el scripts de schema y luego de data_ingestion el primero crea la estructura completa y el segundo inserta los datos necesarios. 
+	3. Explorando tablas en postgres: aqui podemos conectarnos a la base de datos de prueba para mostrar las conexiones a diferentes bases de datos que se pueden tener y mostrar como es la relacion de las tablas, es indicar que es importate saber la relacion y ver esto para poder entender como funcionan. Mostrar que si rompen algo no pasa nada solo debemos cargar la data y para eso es este curso. Comprender de manera practica las bases de datos y menos teorica aunque esta ultima es necesaria.
+
+
+Estructura de cada  parte del video. 
+
+Primera parte 
+	1. Simple mostrar la app la interfaz y algunas cosas para darle un poco mas de contexto a dicha app
+	2. Luego mostrar como realizar la conexion hacer en enfasis que puede realizar conexiones a muchas gestores de sql como mysql - postgre - microsoft - mongo db (indicar que esta es bases no relacionales). 
+	3. Por ultimo realizar la conexion con la base de datos postgre y mostrar como sabemos si la conexion fue exitosa o no para tener una ayuda mas visual
+	4. Ahora realizar una mini demo rapida de las configuraciones extras para no tener problemas en el futuro con las bases de datos
+		a. Primero no seleccionamos que se vean todas las bases de datos y creamos una rapida para mostrar que no se muestra 
+		b. Luego activamos la configuracion para que muestre dicha db.
+		c. Por ultimo configuramos para que la herramienta cambie nuestras palabras a mayusculas directamente windows - preferences - editor - sql editors - formato ( aqui debemos buscar la opcion que dice keyword o palabras claves le indicamos upper o mayuscula.
+	5. Eliminamos las bases de datos creadas para dejar mas limpio el area de trabajo. 
+
+Segunda parte
+	1. Debemos crear una base de datos de dos formas una visual otra con el editor de sql.
+		a. La primera es facil nada complicado debemos hacer lo siguiente:
+			i. Damos click derecho en la parte donde esta la conexion de postgres donde dice database 
+			ii. Como ven nos muestran la opcion directamente de crear una base de datos 
+			iii. En el recuadro que nos figura solo debemos indicar el nombre. (recomendacion evitar nombres largos)
+			iv. Siempre que creemos una base de datos debemos refrescar el menu contextual de la parte izquierda para que nos muestre la base de datos recien creada. 
+		b. La segunda forma es mas rapida aunque por ahora les parecera un poco mas complicada, debemos abri el gestor de sql
+			i. Este lo hacemos dando al icono que dice sql
+			ii. Ya dentro del editor escribimos la siguiente sentencia create database name_database.
+			iii. Por ultimo igual que en la forma visual debemos actualizar para poder ver la base de datos ya creada.
+	2. Aqui debemos crear la base de datos para que podamos realizar todas las consultas necesarias y desarrollar el curso, asi mismo les servira para practicar ya que al final del curso les dejare una serie de ejercicios son su solucion para que puedan hacerlas y comparar resultados todo bien explicado al detalle. 
+		a. Primero creamos dos bases de datos (esto para crear con codigo y otra como si fuese el respaldo .sql)con el nombre de su preferencia igualmente los datos son como si fuese una universidad. Esto lo podemos hacer de manera visual o con el editor sql (relaizarlo con el editor sql es lo mas reconmedable para que se acostumbren a la interfaz)
+		b. Al tener ambas bases de datos creados en una levantamos el .sql y en la otra usar lo scripts para crear las tablas y despues el insert que son los archivos schema y data_ingestion
+		c. Aqui podemos indicar que se pueden cargar bases de datos si tenemos los archivos necesarios o crear nuestra bases de datos de cero. 
+	3. En este punto lo primero que hacemos es ver que tiene una base de datos de prueba, y podemos mostrar los primeros schema, y luego vemos las base de datos creada para el curso y damos un pequeno resumen del schema y los datos que tiene hacer un poco largo el video para consumir tiempo. 
+
+
+
+El video se puede dividir en tres partes, las cuales a continuacion de daran el detalle de que hacer en cada parte para poder definir tiempos en cada una.
+
+
+
+
+
+Pequena intro 
+Ya teniendo instalado los programas necesarios, ahora vamos a iniciar con la herramienta dbeaver la cual nos permitira gestionar de manera mas grafica nuestras bases de datos la iniciamos y vemos que nos carga demos un pequeno repaso a la misma con al finalidad de entender ciertas cosas. En la parte de arriba tenemos el tipico menu de navegacion  donde haremos foco en el menu windows para poder configurar que las palabras claves pasen a mayusculas de manera automatica, muy util para no preocuparnos por ese tipo de cosas, luego tenemos el menu de accesos rapidos el mismo tiene varios que nos interesa el que dice SQL, este nos permite tanto ejecutar una nueva consulta sql como ver las que estan guardas en el pc, mas a la derecha tenemos dos importantes que ver el primero nos permite ver a que sgdb estamos conectados aqui vamos a ver ejemplo si tenemos conexiones con postgres - mysql - sql server u otro las vamos a ver en este boton de manera rapida y el siguiente nos permite ver las base de datos a la que estamos conectados (cuando seleccinamos el sgdb aparecera un boton para ver las bases de datos que tiene creadas ese gestor). 
+
+Luego el programa se divide en dos parte fundamentales, una donde vemos tanto los gestores como las bases de datos a mano izquierda y el panel principal que esta a mano derecha el mismo cuando tengamos consultas sql abiertas estara de este lado. 
+
+
+Primera parte
+Para generar nuestra primera conexion con dbeaver, podemos hacerlo de varias maneras: 
+	1. La primera es con el menu de navegacion con el nombre de database - nueva conexion con base de datos 
+	2. Aqui se abrira una ventana en la cual se pueden ver los sgdb mas populares, sql lite - postgre - mariadb - mysql entre otros aqui debemos seleccionar el gestor que vamos a usar en nuestro caso es postgre cuyo logo es un elefante. 
+	3. Le damos a next y aqui nos pedira los datos principales para generar una conexion 
+		a. Debemos cargar los datos para nuestro caso por ahora dejamos todo como esta 
+		b. Solo debemos cargar la clave (esta es la misma que creamos cuando instalamos postgre) 
+		c. Por ultimo le damos a finalizar y deberiamos tener acceso a postgre el mismo nos figurara en la parte izquierda ahora como un nuevo gestor de bases de datos. (aqui hacer el ejemplo rapido mostrar todas las bases de datos, ya que es un error comun que pase esto si somos nuevos) 
+	4. Mostrar la estructura general de la conexion para que comiencen a comprender ciertas cosas de la interfaz. 
+
+Segunda parte 
+Ahora vamos a iniciar a crear nuestra primera base de datos, la idea es hacerlo de dos formar una mas visual otra un poco de codigo para ir coniciendo mas la aplicacion, este punto necesito que hagan tal cual los que les voy pidiendo ya que estas bases de datos seran las que nos sirvan para realizar las practicas mas adelante, asi mismo vamos a ir mostrando el paso a paso y de una manera simple para que puedan comprender todo lo necesario. 
+
+Vamos a crear dos bases de datos al final las pueden dejar ambas o borrar una si desean pero solo para que vean dos formas distintas de generar una base de datos compleja. 
+
+La primera sera de manera visual la cual vamos a hacer lo siguiente 
+	1. En la parte izquierda de la aplicacion podemos ver el logo de postgres (un pequeno elefante) hacemos doble click
+	2. Vemos la estructura que maneja dividida en bases de datos - administracion - info de sistemas (hacemos click en bases de datos)
+	3. Se despliega las bases de datos que tenemos creadas postgre crea una como muetra la misma no tiene datos pero le podemos cargar. 
+	4. Encima del menu base de datos hacemos clikc derecho, de despliega el menu y presinamos sobre el que dice crear nueva base de datos - aqui solo debemos poner un nombre y presionamos ok (como primera recomendacion evitar nombres largos y espacios en el nombre de las bases de datos)
+	5. Por ultimo en el mismo menu podemos presionar f5 o darle click derecho y darle al menu de refrescar esto para poder ver la nueva base de datos creada.
+	6. Si ya podemos ver nuestra base de datos ahora si podemos iniciar la carga de datos correspondiente al archivo universidad_db.sql
+	7. La misma se hace la siguiente manera, hacemos click derecho encima de la base de datos creada. 
+	8. Buscamos la opcion que dice herramientas o tools en ingles, luego a restaurar - en este cuadro solo debemos buscar nuestro archivo .sql el cual esta como material en este video, se nos abre el gestor de archivos de windows en mi casa aqui debo estar pendiente debido a que por default toma solo archivos .backup pero cambiando la extension podemos ver que tambien reconoce los .sql seleccionamos esto y buscamos la carpeta donde esta el archivo descargado. 
+	9. Por ultimo le damos a iniciar y se cargara toda la estructura de la base de datos y los datos necesarios
+	10. Podemos revisar la base de datos siempre recordando que debemos actulizar con f5 o click derecho refrescar 
+
+La segunda forma es un poco mas compleja aunque obtendremos el mismo resultado la voy a mostrar como para que se familiaricen con las sentencias sql y los scripts
+	1. Descargamos los archivos que estan como material extra del video que se llaman schema.sql y data_ingestion.sql, con estos archivos obtendremos la misma base de datos que con el metodo anterior solo que usando sentencias sql que por ahora no tienen mucho sentido pero mas adelante les llamen la atencion y quieran examinarla ustedes mismos. 
+	2. La base de datos la creamos con la siguiente sentencia sql create database name_db presionamos f5 para poder ver nuestra base de datos nueva 
+	3. Ahora lo que hacemos es conectarnos a dicha base de datos para que los scripts de estructura y data se carguen dentro de esta. 
+	4. Ahora necesitamos hacerlo en el siguiente orden primero el archivo schema.sql (lo mas facil es arrastrar el archivo hasta el programa) 
+	5. Este archivo le vamos a dar una vista rapida en la que podemos ver la estructura y relacion entre tablas de toda la base de datos, por ahora no van a enteder mucho de este codigo mas adelante sera mas comprensible para ustedes. 
+	6. Este script los ejecutamos con la combinacion de teclado alt + x el cual iniciara el proceso y nos creara la estructura o tablas de la base de datos
+	7. Como podemos saber que todo esta de manera correcta, hacemos lo siguiente primero el mensaje de confirmacion que todo esta ok nos indicara que hay 16 modificaciones nuevas eso nos indica la cantidad de tablas que tiene nuestra base de datos. 
+	8. Por ultimo presionamos f5 posicionados en la parte izquierda de la aplicacion, o dando click derecho encima de la base  y presionamos refrescar o refresh 
+	9. Luego podemos ver nuestras tablas haciendo click en la flecha que esta al lado de nuestra de base de datos - luego en schema - public - tablas (en esta ultima podemos ver las tablas creadas por el script) 
+	10. Ya con las tablas creadas podemos cargar el archivo de data_ingestion.sql (arrastrasmos el archivo hasta el programa) 
+	11. Alli podremos ver todos los scripts con los insert de los datos y procedemos a ejecutar dicho script con las combinacion de teclas alt + x 
+	12. En este caso pasa lo mismo la ventana de mensajes nos indica que se cargaron en 16 tablas los datos correspondientes. 
+	13. Podemos verificar de manera visual los datos presionando en algunas de las tablas y buscando la opcion de data. 
+
+En este punto podemos ver algunas datos en las tablas y ver tambien el schema, enfatizar que este programa es muy bueno generando esto ya que otros es mas complicado verlo aunque existen opciones mejores a nivel de interfaz como navicat pero son de pago y muy costosas. 
+
+
+Tercera parte 
+Aqui podemos ver algunas estructuras de las tablas y ver los datos, mostrar tambien la base de datos de sql lite. Indicar que a pesar de ser un poco denso o complicado mas adelante entenderemos esto de manera mas facil, en este punto mostrar los datos en las tablas y extenderse un poco en lo que son tablas relacionales de manera facil. 
+
+
+	Un ejemplo practico seria una factura donde podemos relacionar a un cliente con varias facturas, osea existe una relacion directa entre el cliente y la facturacion a nivel de tablaa. Igualmente estos conceptos los ampliaremos mas adelante.
+

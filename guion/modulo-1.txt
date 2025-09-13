@@ -1,0 +1,237 @@
+temas:
+	• introduccion al curso y que vas a lograr
+	• por que postgres sql es el rey del sql moderno?
+	• instalacion rapida: postgres + dbeaver paso a paso
+duracion: 20 minutos
+
+
+
+¡Bienvenidos al curso de PostgreSQL para principiantes!
+En este curso tendrás la oportunidad de aprender desde cero o reforzar y perfeccionar tus habilidades en una de las bases de datos más potentes y utilizadas en el mundo.
+El contenido ha sido diseñado de manera clara y práctica, para que cualquier persona, sin importar su nivel previo de experiencia, pueda comprender y aplicar los conocimientos adquiridos de forma efectiva.
+Ahora sí, ¡comencemos juntos este recorrido de aprendizaje!
+
+
+
+	1. Introduccion al curso y que vas a lograr 
+
+En este curso vas dominar los fundamentos de SQL paso a paso con Postgre y DBeaver. Aprenderas a crear, consultar y administrar bases de datos con ejemplos prácticos.
+
+ Diseñado para profesionales y estudiantes que nunca trabajaron con bases de datos pero necesitan adquirir rápidamente las habilidades para implementarlas  en su trabajo. A lo largo de más de 6 horas de contenido teórico-práctico, aprenderás a instalar PostgreSQL y DBeaver, crear bases de datos, trabajar con tablas y realizar consultas que te permitirán extraer, transformar y analizar información de manera profesional.
+Cada módulo combina teoría clara con ejercicios prácticos. Al finalizar este curso, tendrás la confianza y las herramientas necesarias para trabajar con SQL en entornos reales y sentar las bases para niveles mas avazados. 
+
+Que vas a lograr en este modulo??
+ en este modulo Lograras instalar y configurar tanto postgres como dbeaver en tu pc, entender que es sql y postgres. 
+
+	2. Por que postgresql es el rey del sql moderno ??
+Explicar que es sql de forma general luego explicar postgresql y sus ventajas con un google slide
+
+Sql (lenguaje de consulta estructurado) = es un lenguaje de programacion estandar para gestionar y manipular bases de datos relacionales (aclarar que existen tambien las bases de datos no relacionales que no se tocaran en este curso) 
+
+Para que sirve sql:
+Almacenar: información.
+Buscar y recuperar: datos específicos mediante consultas  llamadas queries
+Actualizar: la información existente.
+Eliminar: datos de la base de datos.
+Administrar: la base de datos y mejorar su rendimiento.
+
+Entendiendo que sql es un lenguaje de programacion de consultas podemos ahora indicar que postgre es un sgbd(sistema de gestion de bases de datos relacionales)
+Hace una pausa para explicar este concepto como si fuese un bibliotecario (sgbd) - biblioteca (sql) - libros (datos) 
+El bibliotecario gestiona todo lo relacinado con los libros, sabe donde estan - cuantos libros tiene - te presta libros. 
+
+usa sql como lenguaje base con algunas modificaciones en usos mas complejos,  Este es considerado el rey debido principalmente a que es  gratuito lo cual no genera costos adicionales, tambien es de codigo abierto u opensouce y por ultimo tiene una gran flexibilidad y solidez que requieren las app actuales. 
+
+	3. Instalacion rapida de postgresql y dbeaver ( aqui indicar que los enlaces se dejan el un archivo para que puedan acceder mas facil a los mismos) 
+
+Primero instalamos postgres de la siguiente manera:
+
+### pasos para instalar postgres ####
+
+1. descargar el prorama (entramos a la pagina)
+2. ejecutar el programa
+3. cuando nos indique una password debe esta sera para el super usuario de postgres 
+4. por defect el Puerto es 5432 lo dejamos asi 
+5. seleccionar la configuracion regional (preferiblemente ingles, o cualquiera de su eleccion) 
+6. luego siguiente hasta que inicie la instalacion 
+
+7. luego revisamos que este instalado correctamente 
+	por via cmd con el commando postgres --version nos indica en pantalla la version 
+
+8. dar una muestra de que pgadmin se puede usar como gestor de base de datos pero vamos a usar dbeaver. 
+
+
+
+Texto para decir en cada diapositiva: 
+
+Dispositiva 1 
+
+Hola soy Jesús Becerra, Ingeniero en Telecomunicaciones con más de 6 años de experiencia en análisis de datos, soporte técnico y gestión de sistemas. A lo largo de mi trayectoria he trabajado con SQL, Python, looker studio  y herramientas de visualización, optimizando procesos y creando soluciones prácticas para distintos entornos. 
+
+¡ahora les doy la bienvenida al curso de sql con postgre para principiantes!
+En este curso tendrás la oportunidad de aprender desde cero o reforzar y perfeccionar tus habilidades en una de los gestores de bases de datos más potentes y utilizadas en el mundo.
+El contenido ha sido diseñado de manera clara y práctica, para que cualquier persona, sin importar su nivel previo de experiencia, pueda comprender y aplicar los conocimientos adquiridos de forma efectiva.
+Ahora sí, ¡comencemos juntos este recorrido de aprendizaje!
+
+
+Diapositiva 2 
+
+En este curso vas a dorminar los fundamentos de SQL paso a paso con Postgre, y Dbeaver. Aprenderas a crear, consultar y administrar bases de datos con ejemplo practicos. 
+Creado para profesinales o estuidantes que nunca trabajaron con bases de datos pero necesitan adquirir rapidamente las habiliidades  ya sea para mejorar su perfil o implementarlas en su trabajo . A lo largo de varias videos de contenido teorico y practico, aprenderas a instalar Postgres SQL y Dbeaver, crear bases de datos, trabajar con tablas y realizar consultas que te permitiran extraer, transformar y analizar informacion de manera profesional. 
+
+
+
+Dispositiva 3 
+En este modulo aprenderas que es sql, postgre y la herramienta dbeaver. La finalidad es que comprendas los conceptos basicos para luego adentrarnos en conceptos mas profundos y practicas cada vez mas complejas. 
+
+Dispositiva 4 
+Primero debemos entender que es sql, el cual es un lenguaje de programacion standard para gestionar y manipular bases de datos relacionales, existen otros tipos de bases de datos, como con las no relacionales que tienen otros usos pero no se tocaran en este curso. Sql su siglas significan lenguaje estructurado de consulta. 
+
+Y para que sirve sql: para almacenar - buscar - recuperar - actualizar - eliminar - administrar todo lo que tiene que ver con datos y bases de datos. 
+
+Por otro lado tenemos a postgre, aqui toca aclarar que este es un sgbd (sistema de gestion de bases de datos), que usa sql como lenguaje base y que tiene ciertas modificaciones en operaciones mas complejas. 
+La pregunta es por que usamos y no otro lo primero es gratis y de codigo abierto lo que no genera costos al momento de implementarlo en cualquier proyecto, ademas tiene una gran flexibilidad y solidez rasgos que son requeridos por las app actuales. 
+
+Diapositiva 5
+Para poder cumplir con el curso necesitamos dos programas los cuales son postgresql y dbeaver uno ya lo escuchamos, en el caso de dbeaver es una herramienta visual de gestion de bases de datos. Ahora procedemos a instalar y configurar cada una de las aplicaciones para poder iniciar con el curso.
+
+Videos de instalacion con el paso a paso de cada herramienta.
+### pasos para instalar postgres ####
+
+1. descargar el prorama 
+2. ejecutar el programa
+3. cuando nos indique una password debe esta sera para el super usuario de postgres 
+4. por defect el Puerto es 5432 lo dejamos asi 
+5. seleccionar la configuracion regional (preferiblemente ingles, o cualquiera de su eleccion) 
+6. luego siguiente hasta que inicie la instalacion 
+
+7. luego revisamos que este instalado correctamente 
+	por via cmd con el commando postgres --version nos indica en pantalla la version 
+
+8. dar una muestra de que pgadmin se puede usar como gestor de base de datos pero vamos a usar dbeave
+	9. Mostrar por consola el comando postgre --version para ver si esta instalado el gestor. 
+
+#### manual de instalacion de dbeaver #### 
+herramienta gratuita para gestion de bases de datos de codigo abierto, existen unas mejores pero son de pago como navicat. ventajas de dbeaver es free y Podemos conectarnos a todo tipos de sgbd (MySQL - postgres - sql server - mongodb) 
+
+cargar el paso a paso para instalar la aplicacion 
+
+1. descargar el programa 
+2. seleccionamos el idioma que deseamos 
+3. cuando nos pida para que usuarios indicar todos lo usuarios. 
+4. seleccionamos reset setting - associate sql file - associate sql lite database 
+5. ejecutamo dbeaver 
+6. Podemos indicar que no cree una base de datos de muestra no es necesaria 
+7. si nos sale un cartel de excluir dbeaver de windows security le indicamos que si mejora el performance de la app en windows 
+
+
+Siempre al finalizar cada etapa del curso la idea es indicarle al estudiante que lo esperamos en la proxima clase. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

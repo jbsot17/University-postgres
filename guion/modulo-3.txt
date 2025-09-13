@@ -1,0 +1,167 @@
+tema:
+	• disena tablas con create table y tipos de datos
+	• inserta, actualiza y elimina registros sin errores
+	• claves primarias y foraneas explicacion facil
+duracion: 1 hora 
+
+
+
+Desarrollar bien los temas antes de extenderse explicar los tipos de lenguajes. 
+
+1. DDL (Data Definition Language) - Lenguaje de Definición de Datos
+FUNCIÓN: Crear, modificar o eliminar estructuras de la base de datos (tablas, índices, etc.).
+Palabras claves: create, alter, drop, truncate
+
+
+2. DML (Data Manipulation Language) - Lenguaje de Manipulación de Datos
+FUNCIÓN: Insertar, modificar, eliminar o consultar datos dentro de las tablas.
+Palabras claves: insert , update , delete, select 
+
+
+3. DQL (Data Query Language) - Lenguaje de Consulta de Datos
+FUNCIÓN: Solo consultar datos (aunque SELECT está en DML, muchos lo consideran un sublenguaje aparte).
+Palabras clave: select 
+
+
+4. DCL (Data Control Language) - Lenguaje de Control de Datos
+FUNCIÓN: Controlar acceso y permisos a la base de datos.
+Palabras clave: grant, revoke,deny
+
+
+5. TCL (Transaction Control Language) - Lenguaje de Control de Transacciones
+FUNCIÓN: Gestionar transacciones (confirmar o cancelar cambios).
+Palabras clave: commit, rollback, savepoint, begin transaction 
+
+
+Explicar estos conceptos e indicar que solo vamos a trabajar con DDL y DML los demas son mas complejos y sera en un proximo curso. 
+
+Primera parte del video
+
+Este es el codigo necesario para la primera parte que comprende, las sentencias create , alter , truncate y drop 
+
+
+-- sentecia que se usa para crear estructuras sean bases de datos o tablas que componen nuestras bases de datos 
+
+--  creamos una base de datos
+
+CREATE DATABASE test 
+
+CREATE DATABASE test2
+
+-- sentencia para crear una tabla 
+CREATE TABLE empleados(
+id int GENERATED ALWAYS AS IDENTITY PRIMARY	KEY, -- forma correcta de crear un primary key con autoincrementable
+name varchar(100) NOT NULL,
+email varchar(150) UNIQUE, -- esto lo que hace es que este valor no se puede repetir en otro empleado (dos empleados no pueden tener el mismo mail)
+salario numeric(10,2) CHECK (salario >= 0), -- el numeric le indicamos que contiene un maximo de 10 digitos de los cuales 2 son decimales en este caso el check indica que es valor no puede ser cero 
+direccion varchar(150),
+fehca_nac date NOT NULL
+); 
+
+CREATE TABLE pedidos(
+id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name_pro varchar(150) NOT NULL,
+cantidad int NOT NULL,
+precio_uni NUMERIC(10,2)
+);
+
+
+CREATE TABLE productos(
+id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name varchar(150) NOT NULL,
+activo boolean DEFAULT FALSE ,
+fecha_ingreso date DEFAULT now()
+);
+
+
+CREATE TABLE clientes(
+id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name varchar(150) NOT NULL,
+fecha_nac date NOT NULL,
+genero char(1) CHECK (genero IN ('M','F','O')), -- recuerden que el check delimita nuestra columna y solo deja ingresar datos que definimos 
+edad varchar(3),
+direccion varchar(150)
+)
+
+-- setencia alter 
+-- se usa para modificar tablas creadas con ella podemos cambiar el nombre de columnas, eliminar columnas , cambiar los tipos de datos, agregar columnas y muchas mas
+
+
+-- agregar una columna nueva a nuestra tabla 
+ALTER TABLE clientes
+ADD email varchar(150)
+-- aqui lo que hicimos fue agregar en la tabla clientes la columna nueva llamada email y con el tipo de dato varchar()
+
+-- agregar mas de una columna 
+ALTER TABLE clientes
+ADD (
+telefono varchar(20),
+activo boolean DEFAULT TRUE
+)
+
+
+-- otro uso es elimnar columnas de una tabla 
+ALTER TABLE clientes
+DROP COLUMN email
+
+-- eliminar multiples campos 
+ALTER TABLE clientes 
+DROP COLUMN email
+DROP COLUMN telefono
+
+
+-- modificar el tipo de dato de una columna 
+ALTER TABLE empleados
+ALTER COLUMN fecha_nac TYPE varchar(150)
+--cuanto intente cambiar de nuevo a date me da error usar el comando complejo
+
+--- para cambiar datos complicados 
+ALTER TABLE empleados
+ALTER COLUMN fecha_nac TYPE date USING fecha_nac::date
+
+
+-- renombrar columnas 
+ALTER TABLE pedidos 
+RENAME COLUMN precio_uni TO precio_unitario
+
+--tambien podemos cambiar el nombre de la tabla 
+ALTER TABLE pedidos RENAME TO pedido
+
+
+-- modificar valores por defecto 
+ALTER TABLE productos
+ALTER COLUMN activo SET DEFAULT TRUE 
+
+
+--- sentencia drop y truncate 
+-- diferencia entre ella 
+-- diferencia fundamental entre ellas es que truncate toca datos de manera estructural y truncate a nivel de registros 
+-- un ejemplo es si hacemos drop de una tabla la borra de la base de datos a diferencia de truncate que solo la deja sin registros pero queda en nuestra base de datos
+
+--- sentencia drop 
+
+DROP TABLE clientes -- elimina la tabla de la base de datos 
+
+DROP TABLE IF EXISTS clientes -- verifica que exista y si es asi la borra 
+
+DROP TABLE clientes CASCADE -- esta sentencia se usa cuando sabemos que la tabla tiene dependencias 
+
+DROP TABLE clientes , pedido , productos -- con esto elimanamos varias tablas al mismo tiempo 
+
+-- con esta sentencia podemos elimnar hasta una base de datos 
+
+DROP TABLE test2 -- vamos a eliminar la base de datos 
+
+
+-- truncate solo borra datos mantien la estructura 
+
+TRUNCATE TABLE clientes -- solo elimna todos los registros 
+
+
+TRUNCATE TABLE clientes , pedido -- eliminar los datos de multiples tablas 
+
+TRUNCATE TABLE clientes CASCADE -- esto para eliminar los datos con dependencias. 
+
+
+Segunda parte del video 
+

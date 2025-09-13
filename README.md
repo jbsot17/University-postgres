@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 ### PROYECTO SQL POSTGRES ### 
 
 -- este archive se estara llenando con los datos necesarios para el Proyecto
